@@ -1,0 +1,15 @@
+{% extends "home.html" %}
+{% block content %}
+
+     <h3 style="margin-left: 18%">Choose recipe to delete</h3>
+     <form method="post" action="#" enctype="multipart/form-data" id="deleteRecipeForm" style="margin-left: 18%">
+          <br>
+     <select name="delete_select" id="delete_select" class="form-select" aria-label="Default select example">
+          {% for dict_item in recipe_list %}
+               <option name="delete" value="{{ dict_item['Name'] }}">{{ dict_item['Name'] }}</option>
+          {% endfor %}
+     </select>
+     <br><br>
+     <button type="submit" id="submit">Confirm Delete</button>
+    </form>
+{% endblock content %}>

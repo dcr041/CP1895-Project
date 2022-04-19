@@ -1,0 +1,43 @@
+{% extends "home.html" %}
+{% block content %}
+
+    {% for dict_item in recipe_list %}
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                    <h2> {{ dict_item['Name'] }} </h2>
+                    <img class="list-group-item mx-auto" src="static/images/{{ dict_item['File'] }}" alt="Card image cap">
+                    <br>
+                    <p>
+                      <a class="btn btn-primary" style="margin-left: 400px" data-toggle="collapse" href="#collapse1-{{ loop.index }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Ingredients
+                      </a>
+                      <a class="btn btn-primary" data-toggle="collapse" href="#collapse2-{{ loop.index }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Instructions
+                      </a>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapse3-{{ loop.index }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Servings
+                      </a>
+                    </p>
+                        <div class="collapse" id="collapse1-{{ loop.index }}">
+                          <div class="card card-body">
+                            {{ dict_item['Ingredients'] }}
+                          </div>
+                        </div>
+                        <div class="collapse" id="collapse2-{{ loop.index }}">
+                          <div class="card card-body">
+                            {{ dict_item['Instructions'] }}
+                          </div>
+                        </div>
+                        <div class="collapse" id="collapse3-{{ loop.index }}">
+                          <div class="card card-body">
+                            {{ dict_item['Servings'] }}
+                          </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+      <br>
+    {% endfor %}
+
+{% endblock content %}
