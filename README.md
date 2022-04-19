@@ -7,3 +7,46 @@ The project web app will have a homepage that introduces the recipe page. To get
 # Download & Installation
 ## Step 1:
 - Download the files in the git repo https://github.com/dcr041/CP1895-Project or [click here](https://github.com/dcr041/CP1895-Project/archive/refs/heads/main.zip)
+- Unzip the downloaded folder and add all of the files to your python project.
+
+## Step 2:
+Use the package manager pip to install the required dependencies
+```zsh
+pip install -r requirements.txt
+```
+
+## Step 3:
+From the terminal, run these commands to start the flask application.
+```console
+$env:Flask_APP="application"
+$env:Flask_ENV="development"
+flask run
+```
+
+# Run your Web App
+To upload new recipes or remove recipe items, you must first sign up and create an account.
+## Step 1:
+Click Register. This option can be found in the upper right hand corner of the webpage. Fill out the signup form and submit.
+
+## Step 2:
+Once the account is created, you will be automatically redirected to the login page. Fill out your information and click Login.
+
+# Add recipe
+## Step 1:
+Click Add Recipes. This option can be found in the navigation bar.
+
+## Step 2:
+Fill out the form by entering the recipe name, image, ingredients, instructions, and servings. The recipe image must have the file extension .jpeg, .jpg, or .png.
+
+## Step 3:
+Once the information has been filled out, click Submit Recipe to add the recipe.
+
+# Delete Recipe
+## Step 1:
+Click Delete Recipe. This option can be found in the navigation bar.
+
+## Step 2:
+Select the recipe you want to delete from the dropdwon menu.
+
+## Step 3:
+Once the recipe you want to delete has been selected, click Confirm Recipe.
